@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0; /* Ukloni padding iz main */
+    flex-grow: 1;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0; /* Smanji padding iz headera */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-container {
+    width: 100%; /* Postavi širinu na 100% */
+    background-color: rgb(236, 236, 21); /* Žuta podloga */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Dodaj padding gore i dole */
+}
+
+.job-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px; /* Maksimalna širina za boxove */
+    width: 100%;
+    padding: 0 20px; /* Unutrašnji padding za boxove */
+}
+
+.logo {
+    height: 50px;
+    margin-left: 200px; /* Pomera logo udesno */
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 150px; /* Pomera ikone ulevo */
+}
+
+.nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; /* Dodaje razmak između ikona */
+}
+
+.nav-icon .material-icons {
+    font-size: 30px;
+}
+
+.nav-icon p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+.job-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    width: calc(25% - 40px); /* 4 boxa po redu sa marginama */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-description {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.job-number {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.premium-section {
+    background-color: #1E90FF; /* Plavi wallpaper */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.premium-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.premium-job-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skriva sve osim aktivnog slajda */
+.premium-job-box {
+    display: none;
+}
+
+.premium-job-box.active {
+    display: block;
+}
+
+/* Stilovi za slider */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.premium-job-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.slider-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.premium-job-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.left-column, .right-column {
+    width: 48%; /* Svaka kolona zauzima po 48% širine */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium-job-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.premium-job-salary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.salary-box {
+    background-color: #1E90FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.salary-info {
+    font-size: 12px;
+    color: gray;
+}
+
+.premium-job-skills {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.skill-box {
+    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.premium-job-location {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.location-box {
+    background-color: #1E90FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.premium-job-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.company-logo {
+    width: 70px; /* Povećaj veličinu slike od firme */
+    height: 70px; /* Povećaj veličinu slike od firme */
+    margin-bottom: 20px; /* Povećaj odmak ispod slike od firme */
+}
+
+
+.company-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.company-size {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Siva linija po sredini */
+.premium-job-content::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: gray;
+}
+
+
+
